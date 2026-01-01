@@ -1,0 +1,20 @@
+{
+  "enabled": true,
+  "name": "Clarity",
+  "description": "Analyzes UI copy and wording when a Figma URL is pasted",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/*"
+    ],
+    "condition": {
+      "type": "contentContains",
+      "pattern": "figma\\.com"
+    }
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "I notice you've added a Figma link. I can help you with:\n\n1. 📝 **UI Copy Analysis** - Review text content, clarity, tone, grammar, and microcopy\n2. 🎨 **Design Critique** - Check touch targets, spacing, typography, and Cloudscape compliance\n\nWhich analysis would you like me to run? Or should I do both?"
+  }
+}
